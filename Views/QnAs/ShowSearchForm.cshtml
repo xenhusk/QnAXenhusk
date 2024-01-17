@@ -1,0 +1,17 @@
+﻿<head>
+    <link rel="stylesheet" href="~/css/ShowSearchForm.css" />
+</head>
+<body>
+    <div class="container">
+        <img src="/Colored Xenhusk (Medium).png" alt="Logo" class="logo">
+        <form asp-action="ShowSearchResults">
+            <div class="form-group">
+                <label name="SearchPhrase" class="control-label"></label>
+                <div class="input-container">
+                    <input name="SearchPhrase" class="form-control" placeholder="Enter a keyword" required />
+                    <input type="submit" value="Search" class="btn btn-primary" />
+                </div>
+            </div>
+        </form>
+    </div>
+</body>

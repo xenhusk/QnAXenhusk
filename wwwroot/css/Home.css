@@ -1,0 +1,43 @@
+﻿@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+body {
+    min-height: 100vh;
+    background-image: url('/bg7.jpg');
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    position: relative;
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+}
+
+.center-text {
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+}
+
+/* Add the following styles to darken the background image */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust the alpha value (0.5 for 50% darkness) */
+    z-index: -1;
+}
+
+/* Hide the slider (replace '.slider' with the actual class or ID of your slider) */
+.slider {
+    display: none;
+}

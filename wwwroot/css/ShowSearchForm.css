@@ -1,0 +1,89 @@
+﻿@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+body {
+    min-height: 100vh;
+    background-image: url('/bg7.jpg');
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    position: relative;
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+}
+
+    body::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.5); 
+        z-index: -1; 
+    }
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.logo {
+    width: 100px; /* Adjust the size as needed */
+    height: 100px; /* Maintain the 1x1 ratio */
+    margin-bottom: 30px; /* Adjust the margin as needed */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-container {
+    display: flex;
+}
+
+.form-control {
+    border: none; /* Remove border */
+    border-radius: 20px 0 0 20px;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.2); /* Add transparent background */
+    color: #fff; !important;/* Set text color to white */
+    padding: 10px; /* Adjust padding as needed */
+}
+
+    .form-control::placeholder {
+        color: rgba(255, 255, 255, 0.7); /* Adjust the color and opacity as needed */
+        text-indent: 10px;
+    }
+
+body .form-control {
+    color: #fff !important; /* Set text color to white */
+}
+    .form-control:hover,
+    .form-control:focus {
+        background: rgba(255, 255, 255, 0.3); /* Adjust hover and focus background color */
+    }
+
+.btn {
+    border-radius: 0 20px 20px 0;
+    color: #333;
+    background-color: #fff;
+    border-color: #5300a6;
+}
+/* Example: Override primary button color and background-color */
+.btn-primayy {
+    color: #5300a6;
+    background-color: #fff;
+    border-color: #5300a6;
+}
+
+/* Example: Override button hover styles */
+.btn:hover {
+    color: #fff;
+    background-color: #5300a6;
+    border-color: #5300a6;
+}

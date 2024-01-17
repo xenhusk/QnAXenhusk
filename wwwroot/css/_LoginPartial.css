@@ -1,0 +1,11 @@
+﻿/* Style for the Log Out link */
+.navbar .form-inline button {
+    color: #fff; 
+    background-color: #fff !important; 
+    border: none;
+}
+
+    /* Hover effect for the Log Out link */
+    .navbar .form-inline button:hover {
+        color: #5300a6; 
+        background-color: #fff; 

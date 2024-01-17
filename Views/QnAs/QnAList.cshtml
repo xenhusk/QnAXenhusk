@@ -1,0 +1,71 @@
+﻿@model IEnumerable<QnAXenhusk.Models.QnAs>
+
+@{
+    ViewData["Title"] = "QnAList";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/Index.css" />
+</head>
+
+<body>
+    <div class="wrapper">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Question)
+                </th>
+
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Question)
+                    </td>
+
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    </div>
+
+    <div class="button-container">
+        <p>
+            <a asp-action="Create">
+                <button type="button" class="btn btn-primary">Create New</button>
+            </a>
+        </p>
+    </div>
+
+    <div class="pagination">
+        <ul class="pagination">
+
+            <!-- Previous Page -->
+            <li class="page-item @(ViewBag.CurrentPage == 1 ? "disabled" : "")">
+                <a class="page-link" asp-action="Index" asp-route-page="@(ViewBag.CurrentPage - 1)">Prev</a>
+            </li>
+
+            <!-- Page Links -->
+            @for (int i = Math.Max(1, ViewBag.CurrentPage - 1); i <= Math.Min(ViewBag.TotalPages, ViewBag.CurrentPage + 1) || i <= Math.Min(ViewBag.TotalPages, ViewBag.CurrentPage + 2); i++)
+            {
+                <li class="page-item @(i == ViewBag.CurrentPage ? "active" : "")">
+                    <a class="page-link" asp-action="Index" asp-route-page="@i">@i</a>
+                </li>
+            }
+            <!-- Next Page -->
+            <li class="page-item @(ViewBag.CurrentPage == ViewBag.TotalPages ? "disabled" : "")">
+                <a class="page-link" asp-action="Index" asp-route-page="@(ViewBag.CurrentPage + 1)">Next</a>
+            </li>
+        </ul>
+    </div>
+</body>

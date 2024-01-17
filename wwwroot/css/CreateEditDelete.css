@@ -1,0 +1,92 @@
+﻿@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-image: url('/bg7.jpg');
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+    body::before {
+        content: "";
+        position: absolute;
+        top: -10%;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: -1;
+        min-height: 120%;
+    }
+
+.wrapper {
+    width: 600px; /* Increase the width of the wrapper */
+    background: white;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color: #fff;
+    border-radius: 10px;
+    padding: 30px 40px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.form-group {
+    margin-bottom: 20px !important; /* Increase the margin between form groups */
+}
+
+/* Optionally, you can set a max-width for the input fields if needed */
+.form-control {
+    max-width: 500px !important; /* Adjust the max-width according to your design */
+}
+
+a {
+    color: black;
+    text-decoration: underline;
+}
+
+.button-container {
+    position: fixed;
+    bottom: 10%;
+    right: 5%;
+    transform: translateY(-100%);
+    transform: translateX(-545%);
+}
+
+/* Example: Override default button color and background-color */
+.btn {
+    color: #333;
+    background-color: #fff;
+    border-color: #5300a6;
+}
+
+/* Example: Override primary button color and background-color */
+.btn-primary {
+    color: #5300a6;
+    background-color: #fff;
+    border-color: #5300a6;
+}
+
+/* Example: Override button hover styles */
+.btn:hover {
+    color: #fff;
+    background-color: #5300a6;
+    border-color: #5300a6;
+}
+
+a:hover {
+    color: #5300a6;
+}

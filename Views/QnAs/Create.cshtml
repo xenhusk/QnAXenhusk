@@ -1,0 +1,45 @@
+﻿@model QnAXenhusk.Models.QnAs
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<head>
+    <link rel="stylesheet" href="/css/CreateEditDelete.css" />
+</head>
+<body>
+
+    <div class="wrapper">
+        <form asp-action="Create">
+<h1 class="text-dark">Create</h1>
+
+            <h4 class="text-dark">QnAs</h4>
+<hr />
+<div class="container">
+                <div class="form-group row position-relative">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group row text-dark">
+                <label asp-for="Question" class="control-label"></label>
+                <input asp-for="Question" class="form-control" />
+                <span asp-validation-for="Question" class="text-danger"></span>
+            </div>
+            <div class="form-group row text-dark">
+                <label asp-for="Answer" class="control-label"></label>
+                <input asp-for="Answer" class="form-control" />
+                <span asp-validation-for="Answer" class="text-danger"></span>
+            </div>
+            <div class="form-group row">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+        <div/>
+</body>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

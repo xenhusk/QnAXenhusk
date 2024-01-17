@@ -1,0 +1,144 @@
+﻿@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-image: url('/bg7.jpg');
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+    body::before {
+        content: "";
+        position: absolute;
+        top: -10%;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: -1;
+        min-height: 120%;
+    }
+
+.wrapper {
+    width: 1000px;
+    background: white;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color: #fff;
+    border-radius: 10px;
+    padding: 30px 40px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    color: black !important;
+}
+
+    .table th,
+    .table td {
+        padding: 5px;
+        border: none;
+    }
+
+    .table td {
+        margin-left: 0px;
+    }
+
+.pagination-container {
+    display: flex;
+    height: calc(100vh - 140px); /* Adjust the height accordingly */
+    margin-top: 20px;
+}
+
+.pagination {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px; /* Adjust as needed */
+    transform: translateX(20%)
+}
+
+    .pagination li {
+        display: inline-block;
+        margin-right: 0px;
+    }
+
+    .pagination .active a {
+        background-color: #5300a6 !important;
+        color: #fff;
+        border-color: #5300a6 !important;
+    }
+
+    .pagination a:hover {
+        color: #5300a6 !important;
+        background-color: #e3e3e3 !important;
+        border-color: #e3e3e3;
+    }
+
+a {
+    color: black;
+    text-decoration: underline;
+}
+
+.page-link {
+    position: relative;
+    display: block;
+    color: black;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.button-container {
+    position: fixed;
+    bottom: 10%;
+    right: 5%;
+    transform: translateY(-100%);
+    transform: translateX(-545%);
+}
+
+/* Example: Override default button color and background-color */
+.btn {
+    color: #333;
+    background-color: #fff;
+    border-color: #5300a6;
+}
+
+/* Example: Override primary button color and background-color */
+.btn-primary {
+    color: #5300a6;
+    background-color: #fff;
+    border-color: #5300a6;
+}
+
+/* Example: Override button hover styles */
+.btn:hover {
+    color: #fff;
+    background-color: #5300a6;
+    border-color: #5300a6;
+}
+
+a:hover {
+    color: #5300a6;
+    }
